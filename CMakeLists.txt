@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(Speed-e_bot)
+project(speed-e_bot)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
