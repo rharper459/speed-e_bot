@@ -14,10 +14,10 @@ def generate_launch_description():
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
     # !!! MAKE SURE YOU SET THE PACKAGE NAME CORRECTLY !!!
  
-    package_name='Speed-e_bot' #<--- CHANGE ME
+    package_name='speed-e_bot' #<--- CHANGE ME
  
     world = LaunchConfiguration('world')
-    world_path = '/home/lordnair/dev_ws/src/Speed-e_bot/worlds/obstacles.world'
+    world_path = './src/speed-e_bot/worlds/obstacles.world'
     declare_world = DeclareLaunchArgument(
         name='world', default_value=world_path,
         description='Full path to the world model file to load')
