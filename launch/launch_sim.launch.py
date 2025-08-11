@@ -63,6 +63,12 @@ def generate_launch_description():
             '-p',
             f'config_file:={bridge_params}',]
     )
+
+    ros_gz_image_bridge = Node(
+        package="ros_gz_image",
+        executable="image_bridge",
+        arguments=["/camera/image_raw"]
+    )
     
     # Launch them all!
     return LaunchDescription([
@@ -71,5 +77,6 @@ def generate_launch_description():
         gazebo_server,
         gazebo_client,
         ros_gz_bridge,
-        spawn_bot
+        spawn_bot,
+        ros_gz_image_bridge
     ])
